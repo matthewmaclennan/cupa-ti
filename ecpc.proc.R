@@ -18,5 +18,6 @@ pdf(file=paste0(format(Sys.Date(),format="%Y%m%d"),".pdf"))
 par(mfrow=c(2,2))
 for(i in 1:length(lbls)){
  pie(piedata[i,],labels=lbls[i],col=c("green","red"))
+title(main=paste(strwrap(ecpc[i,1],width=35),collapse="\n"))
  }
 dev.off()
